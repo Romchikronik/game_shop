@@ -1,0 +1,18 @@
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+    <div class="cart-cards__item">
+        {% if item.product.quantity < 0 %}
+        <a href="{% url 'to_cart' item.product.pk 'delete' %}" class="cart-cards__btn"><i class="fa-solid fa-minus"></i></a>
+        {% endif %}
+        <div class="cart-cards__image">
+            <img src="{{ item.product.get_image_url }}" alt="">
+        </div>
+        <p class="card__title cart-cards__title">{{ item.product.title }}</p>
+        <div class="cart-cards__quantity">
+            {{ item.quantity }}
+        </div>
+        <div class="cart-cards__totalsum">
+            <span>сумма</span> {{ item.get_total_price }}
+        </div>
+    </div>
+</div>
+

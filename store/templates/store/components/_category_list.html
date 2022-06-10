@@ -1,0 +1,30 @@
+{% load static %}
+{% load store_tags %}
+{% get_categories as categories %}
+<section class="categories">
+    <h2 class="title">
+        Категории
+    </h2>
+    <div class="container">
+        <div class="categories-block">
+              <a href="{% url 'product_list' %}" class="categories-block__item">
+                <div class="categories-block__img">
+                    <img src="{% static 'store/images/all.png' %}" alt="">
+                </div>
+                <div class="categories-block__text">
+                   Все категории
+                </div>
+              </a>
+            {% for category in categories %}
+            <a href="{{ category.get_absolute_url }}" class="categories-block__item">
+                <div class="categories-block__img">
+                    <img src="{{ category.get_image_url }}" alt="">
+                </div>
+                <div class="categories-block__text">
+                     {{ category.title }}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+{% load static %}
+<div class="header-mobile-background">
+    <div class="container">
+        <div class="header-wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="{% static 'store/images/Logo.png' %}" alt=""></a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-menu__item">
+                        <a href="" class="nav-menu__link get_instruction">Инструкция</a>
+                    </li>
+                    <li class="nav-menu__item dropdown">
+                        <button class="dropdown__toggle dropdown-region" type="button">
+                             1 класс
+                            <i class="fa fa-solid fa-caret-down"></i>
+                        </button>
+                        <ul class="dropdown__menu">
+                            <li><a class="dropdown__item" href="#">2 класс</a></li>
+                            <li><a class="dropdown__item" href="#">3 класс</a></li>
+                            <li><a class="dropdown__item" href="#">4 класс</a></li>
+                            <li><a class="dropdown__item" href="#">5 класс</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="" class="nav-menu__link get_task">Получить задание</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="" class="nav-menu__lang">
+                            <img class="lang__ru" src="{% static 'store/images/lang.png' %}" alt="">
+                            <img class="lang__uzb close_link" src="{% static 'store/images/lang2.png' %}" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+            <div class="header-text">
+                <h1 class="header-text__title">Игра помогает развить</h1>
+                <p class="header-text__subtitle">финансовое мышление</p>
+            </div>
+        </div>
+    </div>
+    </div>

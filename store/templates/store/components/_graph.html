@@ -1,0 +1,31 @@
+{% load static %}
+<div class="container">
+    <div class="row graph_row">
+        <div class="col-md-5 col-sm-6">
+            <div class="block-content">
+                <div class="fill-container">
+                    <span class="fill-limit red" data-limit="50"></span>
+                    <div class="filler-outer">
+                        <div class="filler bg-green"><img class="img-responsive curve-img" src="{% static 'store/images/curve.png' %}" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <h3>Profit</h3>
+                <div class="graph__text">Lorem ipsum dolor sit amet, cones dolor sit amet lecture adipose.</div>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-6">
+            <div class="block-content">
+                <div class="fill-container">
+                    <span class="fill-limit green" data-limit="80"></span>
+                    <div class="filler-outer">
+                        <div class="filler bg-red"><img class="img-responsive curve-img" src="{% static 'store/images/curve.png' %}" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <h3>Lesion</h3>
+                <div class="graph__text">Lorem ipsum dolor sit amet, cones dolor sit amet lecture adipose.</div>
+            </div>
+        </div>
+    </div>
+</div>

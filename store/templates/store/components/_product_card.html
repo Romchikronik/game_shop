@@ -1,0 +1,19 @@
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6">
+    <div class="card">
+        <img class="card__img" src="{{ product.get_image_url }}" alt="">
+        <h5 class="card__title">{{ product.title }}</h5>
+        <p class="card__sum" product-price="{{ product.price }}">{{ product.price }} <span>сум</span></p>
+        <div class="item-controls" data-v-d495864a>
+            <button class="item-sell delete_from_cart disabled"
+                    name="button" data-v-d495864a>Продать
+            </button>
+            <input pattern="\d*" type="number" value="0"
+                   name="name" class="item-input" data-v-d495864a>
+            <button class="item-buy addtocart" name="button"
+                    data-v-d495864a>Купить
+                <span class="cart-item"></span>
+            </button>
+        </div>
+    </div>
+</div>
+

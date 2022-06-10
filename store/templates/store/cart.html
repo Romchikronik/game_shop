@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+
+    <div class="container">
+        <div class="header-block">
+            <a href="{% url 'product_list' %}" class="header-block__link"><i class="fa-solid fa-reply"></i></a>
+            <div class="title header-block__title">Ваша корзина</div>
+        </div>
+    </div>
+
+    <section class="cart-cards">
+        <div class="container">
+            <div class="row">
+                {% for item in items %}
+                {% include 'store/components/_cart-cards.html' %}
+                {% endfor %}
+            </div>
+            <a href="" class="btn-order">Оформить заказ</a>
+        </div>
+    </section>
+
+    <div class="ui-264">
+      {% include 'store/components/_graph.html' %}
+    </div>
+
+{% endblock main %}
+
+{% block task-block %}
+{% include 'store/components/_task-block.html' %}
+{% endblock task-block %}
